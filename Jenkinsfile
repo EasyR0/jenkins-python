@@ -33,5 +33,19 @@ pipeline {
                 '''
             }
         }
+
+        stage('tests-on-dev') {
+            steps {
+                echo 'Testing dev...'
+                bat '''
+                if exist tests rmdir /s /q tests
+                git clone https://github.com/mtararujs/course-js-api-framework.git tests
+
+                cd tests
+                npm install
+                npm run greetings greetings_dev
+                '''
+            }
+        }
     }
 }

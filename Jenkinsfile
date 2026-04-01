@@ -10,7 +10,7 @@ pipeline {
                 git clone https://github.com/mtararujs/python-greetings.git
 
                 cd python-greetings
-                python -m venv venv
+                "C:\\Users\\User\\AppData\\Local\\Python\\bin\\python.exe" -m venv venv
                 venv\\Scripts\\python.exe -m pip install -r requirements.txt
                 '''
             }

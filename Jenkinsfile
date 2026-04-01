@@ -27,8 +27,9 @@ pipeline {
                 "C:\\Users\\User\\AppData\\Local\\Python\\bin\\python.exe" -m venv venv
                 venv\\Scripts\\python.exe -m pip install -r requirements.txt
 
-                pm2 delete greetings-app-dev & set "errorlevel=0"
-                pm2 start app.py --name greetings-app-dev --interpreter venv\\Scripts\\python.exe -- --port 7001
+                "C:\\Users\\User\\AppData\\Roaming\\npm\\pm2.cmd" delete greetings-app-dev & set "errorlevel=0"
+                "C:\\Users\\User\\AppData\\Roaming\\npm\\pm2.cmd" start app.py --name greetings-app-dev --interpreter venv\\Scripts\\python.exe -- --port 7001
+                "C:\\Users\\User\\AppData\\Roaming\\npm\\pm2.cmd" list
                 '''
             }
         }
